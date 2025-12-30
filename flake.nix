@@ -54,11 +54,5 @@
         };
       };
     });
-
-    devShells = forEachSupportedSystem ({pkgs, ...}: {
-      default = pkgs.mkShell {
-        nativeBuildInputs = [pkgs.gcc pkgs.make];
-      };
-    });
   };
 }

@@ -4,7 +4,7 @@
 CC = g++
 CFLAGS2 = -Wall -g -I include
 CFLAGS = -Wall -g -I include `pkg-config --cflags opencv4`
-LIBS = `pkg-config --libs opencv4`
+LIBS = `pkg-config --libs opencv4 -lopencv_videoio`
 LDFLAGS = -lm
 OBJDIR = build
 EXEC_NAME=vqtool
