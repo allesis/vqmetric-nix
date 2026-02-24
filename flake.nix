@@ -7,9 +7,7 @@
     self,
     nixpkgs,
   }: let
-  # TODO: Does not work on x86_64-darwin due to incomprehensible linking errors
-  # will fix at some point, maybe
-    supportedSystems = ["x86_64-linux"];
+    supportedSystems = ["x86_64-linux" "x86_64-darwin"];
     forEachSupportedSystem = f:
       nixpkgs.lib.genAttrs supportedSystems (system:
         f {
